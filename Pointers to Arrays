@@ -1,0 +1,12 @@
+#include <stdio.h>
+int fact(int);
+int main() {
+    int sum=0,i;
+    int *p;int a[5]={1,2,3,4,5};
+    p=a;
+    for(i=0;i<5;i++){
+        sum+=*p;
+        p++;
+    }
+    printf("Sum of array elements  is %d",sum);
+}
