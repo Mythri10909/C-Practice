@@ -1,0 +1,48 @@
+#include <stdio.h>
+int fact(int);
+int main() {
+display();
+display();
+display();
+display();
+display();/*Static Storage Class*/
+displayAuto();/*Automatic Storage Class*/
+displayRegister();/*Register Storage  Class*/
+displayExtern();/*Extern Storage Class*/
+}
+display(){
+    static int num=9;
+    printf("%d \n",num++);/*static Storage Class*/
+}/*OUTPUT : 9
+10
+11
+12
+13
+
+/*Automatic Storage Class*/
+void displayAuto(){
+int num=10;
+printf("%d \n",num);
+}
+num=567;/*ERROR  :   cannot be intialised more than once*/
+printf(num+1);/* ERROR  :   cannot access here*/
+}
+
+
+
+/*Register Storage Class */
+void displayRegister(){
+register int a = 0;   /*OUTPUT     :   main.c:5:5: error: address of register variable ?a? requested printf("%u",&a);
+^~~~~~*/
+printf("%u",&a); 
+}
+
+
+
+/*Extern Storage Class */
+displayExtern(){  
+extern int a; 
+printf("%d",a);  
+}  /*OUTUT  :  20  */
+int a = 20;  
+
