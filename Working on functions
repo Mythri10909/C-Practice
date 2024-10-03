@@ -1,0 +1,14 @@
+#include <stdio.h>
+int fact(int);
+int main() {
+    int num=5;
+    int res=fact(num);
+    printf("Factorial of number is %d",res);
+}
+int fact(int n){
+    int i,res=1;
+    for(i=1;i<=n;i++){
+        res*=i;
+    }
+    return res;
+}
