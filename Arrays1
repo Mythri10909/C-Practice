@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+char a[5];int i;
+printf("Enter Elements : ");
+for(i=0;i<5;i++){
+scanf("%d",&a[i]);
+}
+printf("\n");
+printf("Elements are : ");
+for(i=0;i<5;i++){
+printf("%c",a[i]);
+}
+}
